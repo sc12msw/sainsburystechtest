@@ -3,66 +3,46 @@
     "pairs": [
       {
         "request": {
-          "path": "/api/products",
-          "method": "GET"
+          "path": [
+            {
+              "matcher": "exact",
+              "value": "/api/products"
+            }
+          ],
+          "method": [
+            {
+              "matcher": "exact",
+              "value": "GET"
+            }
+          ]
         },
         "response": {
           "status": 200,
-          "body": [
-            {
-              "id": 1,
-              "name": "Apple",
-              "category": "Fruit",
-              "price": 0.5,
-              "stock": 150
-            },
-            {
-              "id": 2,
-              "name": "Milk",
-              "category": "Dairy",
-              "price": 1.2,
-              "stock": 50
-            }
-          ],
-          "headers": {
-            "Content-Type": "application/json"
-          }
+          "body": "[{\"id\":\"c1b4d4e1-7d3f-44e7-98ff-6b72e2d898d5\",\"name\":\"Apple\",\"price\":0.5,\"stock\":150},{\"id\":\"d2e8f6b3-6d91-4f8b-a97f-4b2e7c3d6c29\",\"name\":\"Milk\",\"price\":1.2,\"stock\":50}]",
+          "encodedBody": false
         }
       },
       {
         "request": {
-          "path": "/api/categories",
-          "method": "GET"
+          "path": [
+            {
+              "matcher": "exact",
+              "value": "/api/categories"
+            }
+          ],
+          "method": [
+            {
+              "matcher": "exact",
+              "value": "GET"
+            }
+          ]
         },
         "response": {
           "status": 200,
-          "body": [
-            {
-              "id": 1,
-              "name": "Fruit",
-              "description": "Fresh fruits"
-            },
-            {
-              "id": 2,
-              "name": "Dairy",
-              "description": "Milk and dairy products"
-            }
-          ],
-          "headers": {
-            "Content-Type": "application/json"
-          }
+          "body": "[{\"id\":\"c1b4d4e1-7d3f-44e7-98ff-6b72e2d898d5\",\"name\":\"Fruits\",\"description\":\"Fresh fruits\"},{\"id\":\"d2e8f6b3-6d91-4f8b-a97f-4b2e7c3d6c29\",\"name\":\"Dairy\",\"description\":\"Dairy products\"}]",
+          "encodedBody": false
         }
       }
-    ],
-    "globalActions": {
-      "delays": [],
-      "delaysLogNormal": [],
-      "delaysExponential": []
-    }
-  },
-  "meta": {
-    "schemaVersion": "v5",
-    "hoverflyVersion": "v1.0.0",
-    "timeExported": "2024-07-09T12:00:00Z"
+    ]
   }
 }
