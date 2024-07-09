@@ -1,0 +1,68 @@
+{
+  "data": {
+    "pairs": [
+      {
+        "request": {
+          "path": "/api/products",
+          "method": "GET"
+        },
+        "response": {
+          "status": 200,
+          "body": [
+            {
+              "id": 1,
+              "name": "Apple",
+              "category": "Fruit",
+              "price": 0.5,
+              "stock": 150
+            },
+            {
+              "id": 2,
+              "name": "Milk",
+              "category": "Dairy",
+              "price": 1.2,
+              "stock": 50
+            }
+          ],
+          "headers": {
+            "Content-Type": "application/json"
+          }
+        }
+      },
+      {
+        "request": {
+          "path": "/api/categories",
+          "method": "GET"
+        },
+        "response": {
+          "status": 200,
+          "body": [
+            {
+              "id": 1,
+              "name": "Fruit",
+              "description": "Fresh fruits"
+            },
+            {
+              "id": 2,
+              "name": "Dairy",
+              "description": "Milk and dairy products"
+            }
+          ],
+          "headers": {
+            "Content-Type": "application/json"
+          }
+        }
+      }
+    ],
+    "globalActions": {
+      "delays": [],
+      "delaysLogNormal": [],
+      "delaysExponential": []
+    }
+  },
+  "meta": {
+    "schemaVersion": "v5",
+    "hoverflyVersion": "v1.0.0",
+    "timeExported": "2024-07-09T12:00:00Z"
+  }
+}

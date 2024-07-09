@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  hoverfly:
+    image: spectolabs/hoverfly:latest
+    ports:
+      - "8500:8500"
+      - "8888:8888"
+    volumes:
+      - ./hoverfly-simulation.json:/etc/hoverfly/simulation.json
+    command: ["-import", "/etc/hoverfly/simulation.json", "-listen-on-host=0.0.0.0"]
